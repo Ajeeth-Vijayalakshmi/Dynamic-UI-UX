@@ -1,0 +1,103 @@
+.componenttab,#importSection{
+    position:relative;
+    margin: 20px 20px 3rem 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: all 100ms ease-in-out;
+  }
+
+  .heading
+  {
+      position:relative;
+      margin:10px;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      background-color: #040094;
+  }
+
+  
+
+  .row{
+      padding: 20px 0px 12px 40px;
+      
+  }
+
+
+  h3{
+      color:#040094;
+  }
+
+  select,input[type=text],input[type=date],input[type=tel],input[type=email]{
+      background-color: #fff;
+      border:none;
+      border-bottom: 1px solid black;
+      width:50%;
+  }
+
+  .mandatory{
+      color:red;
+      font-weight: bold;
+  }
+
+
+  [data-tip] {
+    position:relative;
+  
+  }
+  [data-tip]:before {
+    content:'';
+    /* hides the tooltip when not hovered */
+    display:none;
+    content:'';
+    display:none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #1a1a1a;
+    position:absolute;
+    top:30px;
+    left:35px;
+    z-index:8;
+    font-size:0;
+    line-height:0;
+    width:0;
+    height:0;
+    position:absolute;
+    top:30px;
+    left:35px;
+    z-index:8;
+    font-size:0;
+    line-height:0;
+    width:0;
+    height:0;
+  }
+  [data-tip]:after {
+    display:none;
+    content:attr(data-tip);
+    position:absolute;
+    top:35px;
+    left:0px;
+    padding:1px 8px;
+    background:#1a1a1a;
+    color:#fff;
+    z-index:9;
+    font-size: 0.75em;
+    height:20px;
+    line-height:18px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    white-space:nowrap;
+    word-wrap:normal;
+  }
+  [data-tip]:hover:before,
+  [data-tip]:hover:after {
+    display:block;
+  }
+
+  .importFile{
+    position: relative;
+    margin-left: 40%;
+  }
