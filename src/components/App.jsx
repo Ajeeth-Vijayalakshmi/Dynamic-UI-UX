@@ -3,6 +3,7 @@ import UIcomponent from "./RenderComponent";
 import Product_name from "./Product_name";
 import RenderComponent from "./RenderComponent";
 import Heading from "../UI_components/Heading";
+import Modal from "../UI_components/Modal";
 
 function App()
 {
@@ -13,7 +14,7 @@ function App()
     var   [SectionName,setSectionName]=useState("");
     var   [Questions,setQuestions]=useState([]);
     var   [Toggle,setToggle]=useState(0);
-    
+    var   [isViewJson,setIsViewJson] = useState(false);
 
     //--------------------------------IMPORTTING FUNCTIONS---------------------------//
 
@@ -45,6 +46,12 @@ function App()
 
     //-------------------------------------------------------------------------------//
 
+    function handleModalClick(){
+        setIsViewJson(false);
+    }
+
+    //-------------------------------------------------------------------------------//
+
     return(
         <div>
 
@@ -56,6 +63,19 @@ function App()
                      <button className="btn btn-primary" style={{display:"inline",background:"#040094"}} onClick={handleClick}>Render UI</button>
                 </div>
            </section>
+           
+           <section id="importSection">
+                <div className="importFile">
+                     <label for="label_name"style={{display:"block"}}>Use existing JSON to render UI</label>
+                     <br />
+                     <button style={{marginRight:"17%"}} onClick={()=>{setIsViewJson(true)}}>View JSON File</button>
+                     <button className="btn btn-primary" style={{display:"inline",background:"#040094"}} onClick={handleClick}>Render UI</button>
+                </div>
+           </section>
+
+
+           {isViewJson && <Modal onClick={handleModalClick} />}
+
 
            {(IsFileSelected=='true')?(
 
