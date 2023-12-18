@@ -1,7 +1,7 @@
 {
     "ResponseStatus": "PROCESSED",
     "ApplicationDetail": {
-        "ProductName": "Joyn - Commercial Property",
+        "ProductName": "Commercial Property",
         "ApplicationId": 0,
         "OwnerId": 4042,
         "Description": "{Initial Validation=21, Overall Response=66, Serialize=0, Datasource creation=1, Response construction=0, MetaData API=44}",
@@ -25,7 +25,7 @@
                 "OwnerId": 4042,
                 "ApplicationNumber": "1.0",
                 "ApplicationSubNumber": "1.0",
-                "ApplicationName": "CreateNewSubmission",
+                "ApplicationName": "Insured Information",
                 "Description": "Building Detail",
                 "Type": "Detail",
                 "NumberOfRowsFixed": "",

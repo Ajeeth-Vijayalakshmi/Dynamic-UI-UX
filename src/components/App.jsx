@@ -4,6 +4,7 @@ import Product_name from "./Product_name";
 import RenderComponent from "./RenderComponent";
 import Heading from "../UI_components/Heading";
 import Modal from "../UI_components/Modal";
+import existingJSON from "../Response.json";
 
 function App()
 {
@@ -38,6 +39,18 @@ function App()
 
     //------------------------------------IMPORTING EVENTS---------------------------//
 
+    //-----------------------------------Handling Existing JSON---------------------//
+
+    function handleExistingJson(){
+        (Toggle==0)?setToggle(1):setIsSelected('false');
+        setProductName(existingJSON.ApplicationDetail.ProductName);
+        setSectionName(existingJSON.ApplicationDetail.SubApplicationDetailList[0].ApplicationName);
+        setQuestions(existingJSON.ApplicationDetail.SubApplicationDetailList[0].AttributeDetailList);
+        (ProductName!=null)?setIsSelected('true'):setIsSelected('false');
+    }
+
+    //------------------------------------------------------------------------------//
+
      function handleClick()
      {
          
@@ -63,13 +76,13 @@ function App()
                      <button className="btn btn-primary" style={{display:"inline",background:"#040094"}} onClick={handleClick}>Render UI</button>
                 </div>
            </section>
-           
+
            <section id="importSection">
                 <div className="importFile">
                      <label for="label_name"style={{display:"block"}}>Use existing JSON to render UI</label>
                      <br />
                      <button style={{marginRight:"17%"}} onClick={()=>{setIsViewJson(true)}}>View JSON File</button>
-                     <button className="btn btn-primary" style={{display:"inline",background:"#040094"}} onClick={handleClick}>Render UI</button>
+                     <button className="btn btn-primary" style={{display:"inline",background:"#040094"}} onClick={handleExistingJson}>Render UI</button>
                 </div>
            </section>
 
