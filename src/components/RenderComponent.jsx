@@ -18,7 +18,7 @@ function RenderComponent(props)
 
     //--------------Rendering Button component----------------//
 
-     if(props.type=="button")
+     if(props.type==="button")
     {
         return(
         <Button
@@ -30,7 +30,7 @@ function RenderComponent(props)
 
   //-----------------Rendering Calendar component-------------//
 
-    else if(props.type=="calendar"  || props.type=="date")
+    else if(props.type==="calendar"  || props.type==="date")
     {
 
     return(
@@ -48,7 +48,7 @@ function RenderComponent(props)
 
     //----------------------Rendering Email components--------------//
 
-      else if(props.type=="email")
+      else if(props.type==="email")
       {
       
           return(
@@ -66,7 +66,7 @@ function RenderComponent(props)
 
   //-------------------Rendering Hidden component--------------//
 
-    else if(props.type=="hidden")
+    else if(props.type==="hidden")
     {
 
     return(
@@ -82,7 +82,7 @@ function RenderComponent(props)
   
   //----------------------Rendering Heading components-----------//
 
-  else if(props.type=="heading")
+  else if(props.type==="heading")
   {
     
     return(
@@ -95,7 +95,7 @@ function RenderComponent(props)
 
   //----------------------Rendering Text components--------------//
 
-    else if(props.type=="text" || props.type=="outputtext")
+    else if(props.type==="text" || props.type==="outputtext")
     {
     
         return(
@@ -113,7 +113,7 @@ function RenderComponent(props)
     
   //----------------------Rendering TextArea components--------------//
 
-    else if(props.type=="textarea")
+    else if(props.type==="textarea")
     {
         return(
            <TextArea
@@ -131,7 +131,7 @@ function RenderComponent(props)
 
       //----------------------Rendering Phone components--------------//
 
-      else if(props.type=="phone")
+      else if(props.type==="phone")
       {
       
           return(
@@ -149,7 +149,7 @@ function RenderComponent(props)
 
   //----------------------Rendering Radio components--------------//
    
-    else if (props.type=="radio")
+    else if (props.type==="radio")
     {
         return(
             <Radio
@@ -166,7 +166,7 @@ function RenderComponent(props)
   //----------------------Rendering Select components--------------//
 
 
-    else if(props.type=="select")
+    else if(props.type==="select")
     {
         
         return(
@@ -185,7 +185,7 @@ function RenderComponent(props)
           
   //----------------------Rendering Subheading components--------------//
 
-    else if(props.type=="subheading")
+    else if(props.type==="subheading")
     {
         return (
             <Subheading

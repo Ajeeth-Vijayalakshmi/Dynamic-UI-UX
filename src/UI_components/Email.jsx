@@ -11,10 +11,10 @@ const[Message,setMessage]=useState("");
     
 function handleValidation(event)
 {
-  if(props.IsMandatory=='true')
+  if(props.IsMandatory==='true')
   {
       
-       (event.target.value=="" )&&((props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field"));
+       (event.target.value==="" )&&((props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field"));
        (
            event.target.value.indexOf("@",1)<0
             && event.target.value.indexOf(".",1)<0

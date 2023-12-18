@@ -12,12 +12,12 @@ const[Message,setMessage]=useState("");
     
 function handleValidation(event)
 {
-  if(props.IsMandatory=='true')
+  if(props.IsMandatory==='true')
   {
       
-       (event.target.value=="" )&&((props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field"));
+       (event.target.value==="" )&&((props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field"));
        (event.target.value.length < 10&& event.target.value!="")&&((props.Validatormsg!="")?setMessage(props.Validatormsg):setMessage("Invalid Phone No."));
-       (event.target.value.length==10)&&setMessage("");
+       (event.target.value.length===10)&&setMessage("");
     }
   else{
       setMessage("");

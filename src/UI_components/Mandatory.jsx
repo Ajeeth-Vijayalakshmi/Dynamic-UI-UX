@@ -4,7 +4,7 @@ function CheckforMandatory(props)
 {
 
     
-    if(props.mandatory=='true')
+    if(props.mandatory==='true')
     {
         
         return(

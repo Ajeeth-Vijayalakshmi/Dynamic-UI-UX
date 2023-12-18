@@ -12,9 +12,9 @@ const[Message,setMessage]=useState("");
 function handleValidation(event)
 {
   (
-      (props.IsMandatory=='true')
+      (props.IsMandatory==='true')
             &&
-     (event.target.checked==false )
+     (event.target.checked===false )
   )?(
       (props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please check the box")
     ):setMessage("");

@@ -26,7 +26,7 @@ function App()
 
        fileReader.onload= (event) => {
            Response=JSON.parse(event.target.result);
-           (Toggle==0)?setToggle(1):setIsSelected('false');
+           (Toggle===0)?setToggle(1):setIsSelected('false');
            setProductName(Response.ApplicationDetail.ProductName);
            setSectionName(Response.ApplicationDetail.SubApplicationDetailList[0].ApplicationName);
            setQuestions(Response.ApplicationDetail.SubApplicationDetailList[0].AttributeDetailList);
@@ -42,7 +42,7 @@ function App()
     //-----------------------------------Handling Existing JSON---------------------//
 
     function handleExistingJson(){
-        (Toggle==0)?setToggle(1):setIsSelected('false');
+        (Toggle===0)?setToggle(1):setIsSelected('false');
         setProductName(existingJSON.ApplicationDetail.ProductName);
         setSectionName(existingJSON.ApplicationDetail.SubApplicationDetailList[0].ApplicationName);
         setQuestions(existingJSON.ApplicationDetail.SubApplicationDetailList[0].AttributeDetailList);
@@ -90,7 +90,7 @@ function App()
            {isViewJson && <Modal onClick={handleModalClick} />}
 
 
-           {(IsFileSelected=='true')?(
+           {(IsFileSelected==='true')?(
 
         <div>
 
@@ -121,9 +121,9 @@ function App()
                       var mandatory="";
 
                       (Question.ComponentLabel!="")?(name=Question.ComponentLabel):(name=Question.AttributeName);
-                      (type=="select")?(values=Question.SubApplicationAttributeValueList):(values="");
+                      (type==="select")?(values=Question.SubApplicationAttributeValueList):(values="");
                       (Question.StyleClass!="")?(style=Question.StyleClass):(style="");
-                      (Question.IsRequired=="Y")?(mandatory="true"):(mandatory="");
+                      (Question.IsRequired==="Y")?(mandatory="true"):(mandatory="");
                      return (
 
                             <RenderComponent 

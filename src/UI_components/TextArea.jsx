@@ -11,7 +11,7 @@ const[Message,setMessage]=useState("");
     
 function handleValidation(event)
 {
-  if(props.IsMandatory=='true' && event.target.value=="")
+  if(props.IsMandatory==='true' && event.target.value==="")
   {
       (props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field");
   }
