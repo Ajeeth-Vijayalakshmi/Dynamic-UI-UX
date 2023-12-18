@@ -46,7 +46,7 @@ function App()
         setProductName(existingJSON.ApplicationDetail.ProductName);
         setSectionName(existingJSON.ApplicationDetail.SubApplicationDetailList[0].ApplicationName);
         setQuestions(existingJSON.ApplicationDetail.SubApplicationDetailList[0].AttributeDetailList);
-        (ProductName!=null)?setIsSelected('true'):setIsSelected('false');
+        (ProductName!==null)?setIsSelected('true'):setIsSelected('false');
     }
 
     //------------------------------------------------------------------------------//
@@ -54,7 +54,7 @@ function App()
      function handleClick()
      {
          
-        (ProductName!=null)?setIsSelected('true'):setIsSelected('false');
+        (ProductName!==null)?setIsSelected('true'):setIsSelected('false');
      }
 
     //-------------------------------------------------------------------------------//
@@ -120,9 +120,9 @@ function App()
                       var style="";
                       var mandatory="";
 
-                      (Question.ComponentLabel!="")?(name=Question.ComponentLabel):(name=Question.AttributeName);
+                      (Question.ComponentLabel!=="")?(name=Question.ComponentLabel):(name=Question.AttributeName);
                       (type==="select")?(values=Question.SubApplicationAttributeValueList):(values="");
-                      (Question.StyleClass!="")?(style=Question.StyleClass):(style="");
+                      (Question.StyleClass!=="")?(style=Question.StyleClass):(style="");
                       (Question.IsRequired==="Y")?(mandatory="true"):(mandatory="");
                      return (
 

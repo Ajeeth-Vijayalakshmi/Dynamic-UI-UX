@@ -13,7 +13,7 @@ function Text(props)
     {
       if(props.IsMandatory==='true' && event.target.value==="")
       {
-          (props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field");
+          (props.Requiredmsg!=="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field");
       }
       else{
           setMessage("");

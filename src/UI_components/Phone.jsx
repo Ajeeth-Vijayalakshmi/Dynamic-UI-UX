@@ -15,8 +15,8 @@ function handleValidation(event)
   if(props.IsMandatory==='true')
   {
       
-       (event.target.value==="" )&&((props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field"));
-       (event.target.value.length < 10&& event.target.value!="")&&((props.Validatormsg!="")?setMessage(props.Validatormsg):setMessage("Invalid Phone No."));
+       (event.target.value==="" )&&((props.Requiredmsg!=="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field"));
+       (event.target.value.length < 10&& event.target.value!=="")&&((props.Validatormsg!=="")?setMessage(props.Validatormsg):setMessage("Invalid Phone No."));
        (event.target.value.length===10)&&setMessage("");
     }
   else{

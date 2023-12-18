@@ -13,7 +13,7 @@ function handleValidation(event)
 {
   if(props.IsMandatory==='true' && event.target.selectedIndex<1)
   {
-      (props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please select a value");
+      (props.Requiredmsg!=="")?setMessage(props.Requiredmsg):setMessage("Please select a value");
   }
   else{
       setMessage("");

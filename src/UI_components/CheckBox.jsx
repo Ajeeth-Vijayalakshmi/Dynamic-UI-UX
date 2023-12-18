@@ -16,7 +16,7 @@ function handleValidation(event)
             &&
      (event.target.checked===false )
   )?(
-      (props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please check the box")
+      (props.Requiredmsg!=="")?setMessage(props.Requiredmsg):setMessage("Please check the box")
     ):setMessage("");
     
 }

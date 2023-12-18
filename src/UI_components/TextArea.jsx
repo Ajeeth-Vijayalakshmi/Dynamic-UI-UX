@@ -13,7 +13,7 @@ function handleValidation(event)
 {
   if(props.IsMandatory==='true' && event.target.value==="")
   {
-      (props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field");
+      (props.Requiredmsg!=="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field");
   }
   else{
       setMessage("");

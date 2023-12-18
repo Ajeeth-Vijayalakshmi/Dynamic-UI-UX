@@ -14,12 +14,12 @@ function handleValidation(event)
   if(props.IsMandatory==='true')
   {
       
-       (event.target.value==="" )&&((props.Requiredmsg!="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field"));
+       (event.target.value==="" )&&((props.Requiredmsg!=="")?setMessage(props.Requiredmsg):setMessage("Please fill out this field"));
        (
            event.target.value.indexOf("@",1)<0
             && event.target.value.indexOf(".",1)<0
-            && event.target.value!="")
-            &&((props.Validatormsg!=""
+            && event.target.value!=="")
+            &&((props.Validatormsg!==""
        )?setMessage(props.Validatormsg):setMessage("Enter valid email address."));
 
        (event.target.value.length>=11 
